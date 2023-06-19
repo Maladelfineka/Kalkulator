@@ -13,7 +13,7 @@ function wyniki(napis){
     var liczba ='';
     var znak = '';
     var liczba2 = ''
-    if (napis.indexOf("+") == 1) {
+    if (napis.indexOf("+") != -1) {
         znak = napis.indexOf("+");
         liczba = napis.slice(0, znak);
         liczba2 = napis.slice(znak + 1, napis.length);
@@ -22,7 +22,7 @@ function wyniki(napis){
         console.log(znak)
         msg.innerHTML = parseInt(liczba) + parseInt(liczba2);
 
-    }else if(napis.indexOf("-") == 1) {
+    }else if(napis.indexOf("-") != -1) {
         znak = napis.indexOf("-");
         liczba = napis.slice(0, znak);
         liczba2 = napis.slice(znak + 1, napis.length);
@@ -31,7 +31,7 @@ function wyniki(napis){
         console.log(znak)
         msg.innerHTML = parseInt(liczba) - parseInt(liczba2);
 
-    }else if(napis.indexOf("/") == 1) {
+    }else if(napis.indexOf("/") != -1) {
         znak = napis.indexOf("/");
         liczba = napis.slice(0, znak);
         liczba2 = napis.slice(znak + 1, napis.length);
@@ -39,7 +39,7 @@ function wyniki(napis){
         console.log(liczba2)
         console.log(znak)
         msg.innerHTML = parseInt(liczba) / parseInt(liczba2);
-    }else if(napis.indexOf("*") == 1) {
+    }else if(napis.indexOf("*") != -1) {
         znak = napis.indexOf("*");
         liczba = napis.slice(0, znak);
         liczba2 = napis.slice(znak + 1, napis.length);
